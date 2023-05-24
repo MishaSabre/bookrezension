@@ -45,10 +45,10 @@
         <button type="submit" style="width: 100%" class="btn btn-dark">Добавить</button>
     </form>
 
-    <div class="card-columns">
+    <div class="card-columns" style="width: 18rem;">
         <#list books as book>
             <a href="/book/${book.id}" class="book-link">
-                <div class="card text-white bg-dark my-3 book">
+                <div class="card text-white bg-dark my-3 book" style="width: 18rem;">
                     <div class="card-top">
                         <form action="/book/delete/${book.id}" method="post">
                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
