@@ -20,7 +20,7 @@
         </#if>
         <a class="btn btn-dark mb-3" style="text-align: center; width: 100%"
            href="/my/books">
-            Мои отзывы
+            Мои рецензии
         </a>
         <form action="/logout" method="post">
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
