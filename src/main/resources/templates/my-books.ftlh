@@ -1,6 +1,6 @@
 <#import "blocks/template.ftlh" as t>
 <@t.template user>
-    <h1 style="text-align: center">Мои товары</h1>
+    <h1 style="text-align: center">Мои рецнзии</h1>
     <hr>
     <form action="/book/create" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="form-group">
-            <label for="description">Описание товара</label>
+            <label for="description">Описание</label>
             <textarea required class="form-control" id="description" name="description"></textarea>
         </div>
 
@@ -25,19 +25,19 @@
         <div class="form-group">
             <div class="custom-file">
                 <input required type="file" name="file1" id="file1">
-                <label class="custom-file-label" for="file1">Первая фотография к товару</label>
+                <label class="custom-file-label" for="file1">Первая фотография к рецензии</label>
             </div>
         </div>
         <div class="form-group">
             <div class="custom-file">
                 <input type="file" name="file2" id="file2">
-                <label class="custom-file-label" for="file2">Вторая фотография к товару</label>
+                <label class="custom-file-label" for="file2">Вторая фотография к рецензии</label>
             </div>
         </div>
         <div class="form-group">
             <div class="custom-file">
                 <input type="file" name="file3" id="file3">
-                <label class="custom-file-label" for="file3">Третья фотография к товару</label>
+                <label class="custom-file-label" for="file3">Третья фотография к рецензии</label>
             </div>
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>

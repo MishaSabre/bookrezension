@@ -1,6 +1,6 @@
 <#import "blocks/template.ftlh" as t>
 <@t.template user>
-    <h1 style="text-align: center">Поиск товаров</h1><hr>
+    <h1 style="text-align: center">Поиск рецензий</h1><hr>
     <form method="get" action="/">
         <div class="form-row">
             <div class="form-group col-md-10">
@@ -19,7 +19,7 @@
                     <img src="/images/${book.previewImageId}" width="285px" height="350px">
                     <div class="card-body">
                         <h5 class="card-title">${book.title}</h5>
-                        <p class="card-text">${book.author} ₽</p>
+                        <p class="card-text">${book.author} </p>
                     </div>
                     <div class="card-footer">
                         ${book.date}
