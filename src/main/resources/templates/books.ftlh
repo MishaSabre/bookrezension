@@ -4,7 +4,7 @@
     <form method="get" action="/">
         <div class="form-row">
             <div class="form-group col-md-10">
-                <label for="searchWord">Поиск по объявлениям</label>
+                <label for="searchWord">Поиск по рецензиям</label>
                 <input type="text" name="searchWord" <#if searchWord??>value="${searchWord}"</#if> class="form-control"
                        id="searchWord">
             </div>
