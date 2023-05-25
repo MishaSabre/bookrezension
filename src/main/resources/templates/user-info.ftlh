@@ -13,10 +13,10 @@
     <hr>
     <h1 style="text-align: center">Рецензии пользователя ${user.name}</h1>
     <br>
-    <div class="card-columns">
+    <div class="card-columns" style="width: 18rem;">
         <#list user.books as book>
             <a href="/book/${book.id}" class="book-link">
-                <div class="card text-white bg-dark my-3 product">
+                <div class="card text-white bg-dark my-3 product" style="width: 18rem;">
                     <img src="/images/${book.previewImageId}"
                          class="card-img-top">
                     <div class="card-body">
