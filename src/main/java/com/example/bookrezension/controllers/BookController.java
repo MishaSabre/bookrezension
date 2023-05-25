@@ -35,7 +35,7 @@ public class BookController{
         model.addAttribute("user", bookService.getUserByPrincipal(principal));
         model.addAttribute("book", book);
         model.addAttribute("images", book.getImages());
-        model.addAttribute("authorProduct", book.getUser());
+        model.addAttribute("authorRezension", book.getUser());
         return "book-info";
     }
 
@@ -47,13 +47,13 @@ public class BookController{
     }
 
     @PostMapping("/book/delete/{id}")
-    public String deleteProduct(@PathVariable Long id, Principal principal) {
+    public String deleteBook(@PathVariable Long id, Principal principal) {
         bookService.deleteBook(bookService.getUserByPrincipal(principal), id);
         return "redirect:/my/books";
     }
 
     @GetMapping("/my/books")
-    public String userProducts(Principal principal, Model model) {
+    public String userBooks(Principal principal, Model model) {
         User user = bookService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         model.addAttribute("books", user.getBooks());

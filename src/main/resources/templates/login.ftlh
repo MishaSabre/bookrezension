@@ -2,7 +2,7 @@
 <@t.template user>
     <h1 style="text-align: center">Авторизация</h1>
     <hr>
-    <form action="/login " method="post">
+    <form action="/login" method="post">
         <div class="form-group">
             <label for="email">Электронная почта</label>
             <input type="email" class="form-control" id="email" name="username">

@@ -77,14 +77,17 @@ public class BookService{
                 .orElse(null);
         if (book != null) {
             if (book.getUser().getId().equals(user.getId())) {
+                log.info("Book with id = {} was deleted", id);
                 bookRepository.delete(book);
-                log.info("Product with id = {} was deleted", id);
+                log.info("{} {} {} {}", id, book.getAuthor(), book.getTitle(), book.getDate());
+
             } else {
-                log.error("User: {} haven't this product with id = {}", user.getEmail(), id);
+                log.error("User: {} haven't this book with id = {}", user.getEmail(), id);
             }
         } else {
-            log.error("Product with id = {} is not found", id);
-        }    }
+            log.error("Book with id = {} is not found", id);
+        }
+    }
 
     public Book getBookById(Long id) {
         return bookRepository.findById(id).orElse(null);

@@ -12,7 +12,7 @@
         </div>
     </form>
     <hr>
-    <div class="card-columns d-flex" style="width: 18rem;">
+    <div class="card-columns" style="width: 18rem;">
         <#list books as book>
             <a href="/book/${book.id}" class="book-link" >
                 <div class="card text-white bg-dark my-3 ms-3 product" style="width: 18rem;">
